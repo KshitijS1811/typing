@@ -1,0 +1,56 @@
+<div class="card" style="width: 32rem; margin: 10rem auto;">
+  <div class="card-body">
+    <h5 class=" text-primary text-center mb-4">Apna Typing Master</h5>
+    <button (click)="getQuote()">@</button>
+    <p class="text-center fw-bold">
+      <span *ngFor="let letter of myText.split(''); let i = index" [class]="compare(letter, enteredText[i])">{{
+        letter }}</span>
+      <!-- <span>
+          {{randomQuote}}
+        </span>-->
+    </p>
+    <input type="text" class="form-control" #input (keyup)="onInput(input.value)" autofocus>
+    <div class="text-center text-success my-3" *ngIf="myText===enteredText">
+      Success
+    </div>
+  </div>
+</div>
+
+<!-- <div class="container">
+
+  <div class="card mx-auto text-center" style="width: 32rem; margin-top: 10rem">
+
+    <div class="card-body">
+
+      <h3 class="card-title">Typing Challege</h3>
+
+
+
+      <p class="fs-5">
+
+        <span *ngFor="let letter of myText.split(''); let i = index" [class]="compare(letter, enteredText[i])">{{
+          letter }}</span>
+
+      </p>
+
+
+
+      <div class="my-5">
+
+        <input type="text" #box (keyup)="onInput(box.value)" class="form-control" placeholder="start typing here" />
+
+      </div>
+
+
+
+      <div *ngIf="myText === enteredText">
+
+        <p class="text-center text-success fs-5">Success !</p>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</div> -->
